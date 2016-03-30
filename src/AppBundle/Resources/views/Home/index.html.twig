@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+{% block title %}
+    {{ parent() ~ ' - Home' }}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+{% block body %}
+    {{ parent () }}
+    Cours de {{ name }}
+    <p>list of tutorials</p>
+    <ul>
+        {% for tutorial in tutorials %}
+            <li>id: {{ tutorial.id }}{{ tutorial.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
