@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    {{ parent() ~ ' - Home' }}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <h1>Cours de {{ name }}</h1>
+    {% include('AppBundle:Article/Partial:list.html.twig') %}
+{% endblock %}
