@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $antispam = $this->get('antispam');
 
-        dump($antispam->isSpam('hhefzbshbcdshudbqsdhdsbdhsbqdwjbdqsdjhbsdcwdsx'));die;
+        // dump($antispam->isSpam('hhefzbshbcdshudbqsdhdsbdhsbqdwjbdqsdjhbsdcwdsx'));die;
 
         $name = 'Symfony 3';
 
