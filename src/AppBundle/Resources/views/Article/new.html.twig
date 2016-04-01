@@ -1,10 +1,10 @@
 {% extends "::base.html.twig" %}
 
 {% block title %}
-    {{ parent() ~ ' - Home' }}
+    {{ parent() ~ ' - New' }}
 {% endblock %}
 
 {% block body %}
     {{ parent() }}
-    {% include('AppBundle:Article/Partial:list.html.twig') %}
+    {{ form(form) }}
 {% endblock %}
