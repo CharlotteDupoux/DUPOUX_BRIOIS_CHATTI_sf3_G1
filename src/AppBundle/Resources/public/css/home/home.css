@@ -1,3 +1,10 @@
-body{
-    background-color: blue;
+body {
+}
+label{
+    color: red;
+}
+.articles{
+    min-height: 150px;
+    max-height: 250px;
+    /*border: 1px solid red;*/
 }

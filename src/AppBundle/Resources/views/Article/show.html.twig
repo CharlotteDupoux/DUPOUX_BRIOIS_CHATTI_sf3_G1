@@ -1,0 +1,29 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    {{ parent() ~ ' - Article' }}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    {% for article in articles%}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>{{ article.title }}</h2>
+                </div>
+                <div class="col-md-2">
+                    <p>{{ article.createdAt|date('m/d/y H:i') }}</p>
+                </div>
+                <div class="col-md-3">
+                    <a href="{{ path('article_list', {'tag' : article.tag}) }}">Tags: {{ article.tag }}</a>
+                </div>
+                <div class="col-md-12">
+                    <p>{{ article.content }}</p>
+                </div>
+
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
