@@ -8,14 +8,43 @@
     {{ parent() }}
     <div class="col-md-offset-3 col-md-6">
         {{ form_start(form) }}
+        <div class="col-md-12 form">
             {{ form_errors(form) }}
 
-            {{ form_row(form.title, { 'label': 'Titre' }) }}
-            {{ form_row(form.content, { 'label': 'Description' }) }}
-            {{ form_row(form.author, { 'label': 'Auteur' }) }}
-            {{ form_row(form.tag, { 'label': 'tags' }) }}
+            <div class="col-md-3 titleLabel">
+                {{ form_label(form.title , 'Titre', {'label_attr': {'class': 'foo'}}) }}
+            </div>
+            <div class="col-md-9 title">
+                {{ form_widget(form.title, {'attr': {'class': 'titre'}}) }}
+            </div>
 
-            {{ form_row(form.save, { 'label': 'Submit me' }) }}
+
+            <div class="col-md-3 descriptionLabel">
+                {{ form_label(form.content , 'Description', {'label_attr': {'class': 'foo'}}) }}
+            </div>
+            <div class="col-md-9 description">
+                {{ form_widget(form.content, {'attr': {'class': 'description'}}) }}
+            </div>
+
+
+            <div class="col-md-3 auteurLabel">
+                {{ form_label(form.author , 'Auteur', {'label_attr': {'class': 'foo'}}) }}
+            </div>
+            <div class="col-md-9 auteurLabel">
+                {{ form_widget(form.author, {'attr': {'class': 'auteur'}}) }}
+            </div>
+
+            <div class="col-md-3 tagLabel">
+                {{ form_label(form.tag , 'Tags', {'label_attr': {'class': 'foo'}}) }}
+            </div>
+            <div class="col-md-9 tagLabel">
+                {{ form_widget(form.tag, {'attr': {'class': 'tag'}}) }}
+            </div>
+
+            <div class="col-md-12 button">
+                {{ form_row(form.save, { 'label': 'Submit me' }) }}
+            </div>
+        </div>
         {{ form_end(form) }}
     </div>
 {% endblock %}
